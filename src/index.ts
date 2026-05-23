@@ -31,10 +31,10 @@ function removeLinesFromDoc(doc: Doc): Doc {
   }
 
   if (Array.isArray(doc)) {
-    return doc.map((item) => {
+    return doc.map((item, i) => {
       if (typeof item === 'object' && item !== null && 'type' in item) {
         if (item.type === 'line') {
-          return ' ';
+          return (i > 0 && i !== doc.length - 2) ? ' ' : '';
         }
       }
       return removeLinesFromDoc(item);

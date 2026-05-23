@@ -1,6 +1,5 @@
 .DS_Store
 node_modules
-dist
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json

@@ -6,20 +6,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/martinzima/prettier-plugin-one-line-imports"
+    "url": "https://github.com/dimfishr/prettier-plugin-one-line-imports"
   },
   "type": "module",
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.mjs",
+	"module": "dist/index.mjs",
+  "types": "src/types/index.d.ts",
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
-  },
   "scripts": {
     "build": "rolldown -c",
     "test": "vitest",
@@ -46,6 +41,5 @@
   },
   "peerDependencies": {
     "prettier": ">=3.0.0"
-  },
-  "packageManager": "pnpm@10.12.2+sha512.a32540185b964ee30bb4e979e405adc6af59226b438ee4cc19f9e8773667a66d302f5bfee60a39d3cac69e35e4b96e708a71dd002b7e9359c4112a1722ac323f"
+  }
 }
